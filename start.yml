@@ -1,0 +1,24 @@
+user:
+  - admin: no
+  - name: "sam"
+  - age: 30
+  - role: "developer"
+  - skills: ['swift', 'objective-c', 'osx']
+  - location: "Cyprus"
+  - pets: ['dog', 'cat', 'ondatra']
+skill:
+  - name: 'swift'
+  - level: 4
+  - description: |
+    ios developer
+    with swift skills
+location:
+  - country: "Cyprus"
+  - city: "Limassol"
+  - street: "2nd"
+  - house: 11
+  - apartment: 7
+pets:
+  - kind: 'cat'
+  - breed: 'oriental'
+  - can meow: yes
