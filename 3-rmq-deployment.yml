@@ -19,9 +19,15 @@ spec:
             - containerPort: 15672
           env:
             - name: SEED_USERNAME
-              value: rmquser
+              valueFrom:
+                secretKeyRef:
+                  name: rmq-secret
+                  key: SEED_USERNAME
             - name: SEED_USER_PASSWORD
-              value: rmqpasswd
+              valueFrom:
+                secretKeyRef:
+                  name: rmq-secret
+                  key: SEED_USER_PASSWORD
           resources:
             limits:
               memory: "512Mi"
