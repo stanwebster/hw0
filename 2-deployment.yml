@@ -21,3 +21,7 @@ spec:
             limits:
               memory: "512Mi"
               cpu: "300m"
+      volumes:
+        - name: conv-app-cfg
+          configMap:
+            name: conv-app-config
