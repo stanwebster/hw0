@@ -14,20 +14,20 @@ spec:
     spec:
       containers:
         - name: rmq-app
-          image: rabbitmq:3.13.7
+          image: rabbitmq:3.7.3
           ports:
             - containerPort: 15672
           env:
-            - name: SEED_USERNAME
+            - name: RABBITMQ_DEFAULT_USER
               valueFrom:
                 secretKeyRef:
                   name: rmq-secret
-                  key: SEED_USERNAME
-            - name: SEED_USER_PASSWORD
+                  key: RABBITMQ_DEFAULT_USER
+            - name: RABBITMQ_DEFAULT_PASS
               valueFrom:
                 secretKeyRef:
                   name: rmq-secret
-                  key: SEED_USER_PASSWORD
+                  key: RABBITMQ_DEFAULT_PASS
           resources:
             limits:
               memory: "512Mi"

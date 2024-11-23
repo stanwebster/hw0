@@ -4,3 +4,5 @@ metadata:
   name: conv-app-config
 data:
   VITE_DOMAIN: conv.test
+  AMQP_USER: cm1xdXNlcg==
+  AMQP_PASSWORD: cm1xcGFzc3dk
