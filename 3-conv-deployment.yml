@@ -16,7 +16,7 @@ spec:
         - name: conv-service
           image: antonlarichev/conv-service:1.0
           ports:
-            - containerPort: 3030
+            - containerPort: 3000
           env:
             - name: AMQP_EXCHANGE
               valueFrom:
@@ -46,4 +46,4 @@ spec:
           resources:
             limits:
               memory: "512Mi"
-              cpu: "300m"
+              cpu: "100m"

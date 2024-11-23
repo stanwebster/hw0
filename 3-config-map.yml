@@ -3,6 +3,6 @@ kind: ConfigMap
 metadata:
   name: conv-app-config
 data:
-  VITE_DOMAIN: conv.test
+  VITE_DOMAIN: ""
   AMQP_USER: cm1xdXNlcg==
   AMQP_PASSWORD: cm1xcGFzc3dk

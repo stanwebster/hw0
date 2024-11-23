@@ -20,8 +20,10 @@ spec:
           resources:
             limits:
               memory: "512Mi"
-              cpu: "300m"
-      volumes:
-        - name: conv-app-cfg
-          configMap:
-            name: conv-app-config
+              cpu: "500m"
+          env:
+            - name: VITE_DOMAIN
+              valueFrom:
+                configMapKeyRef:
+                  name: conv-app-config
+                  key: VITE_DOMAIN
