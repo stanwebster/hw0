@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Values.app.name }}-config
+data:
+  VITE_DOMAIN: {{ .Values.app.appconfig.VITE_DOMAIN }}
+  AMQP_USER: {{ .Values.app.appconfig.AMQP_USER }}
+  AMQP_PASSWORD: {{ .Values.app.appconfig.AMQP_PASSWORD }}

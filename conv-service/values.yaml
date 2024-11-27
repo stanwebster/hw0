@@ -1,0 +1,21 @@
+app:
+  name: conv-app
+  image: antonlarichev/conv-app
+  version: 1.2
+  components: front
+  port: 80
+  replicas: 1
+  resources:
+    limits:
+      memory: "512Mi"
+      cpu: "500m"
+    env:
+      - name: VITE_DOMAIN
+        valueFrom:
+          configMapKeyRef:
+            name: conv-app-config
+            key: VITE_DOMAIN
+  appconfig:
+    VITE_DOMAIN: ""
+    AMQP_USER: cm1xdXNlcg==
+    AMQP_PASSWORD: cm1xcGFzc3dk
